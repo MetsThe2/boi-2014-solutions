@@ -1,8 +1,3 @@
-/* Solution to
-https://docs.google.com/viewer?url=http://www.teaduskool.ut.ee/sites/default/
-files/teaduskool/olympiaad/rahvusvahelised/boi_2013_14_proov_vork_est.pdf
-*/
-
 #include <assert.h>
 #include <stdlib.h> // abs, malloc
 #include <stdio.h>  // printf
