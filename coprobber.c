@@ -36,9 +36,8 @@ static void move_cop(unsigned robber, unsigned target_dist)
 unsigned nextMove(unsigned R)
 {
   const unsigned d = cop_robber_dist(R);
-  if (d) {
-    move_cop(R, d - 1);
-  } else if (connected) {
+  if (d) move_cop(R, d - 1);
+  if (d < 2 && connected) {
     free(connected);
     connected = NULL;
   }
