@@ -27,10 +27,30 @@ int start(unsigned N, bool **A)
   return cop = middle_of(A, N);
 }
 
+static unsigned intersect_dist(unsigned a, unsigned b, unsigned *visited, unsigned cur_dist)
+{
+  if (a == b) return 0;
+  visited[cur_dist++] = a;
+  unsigned min;
+  for (unsigned i = 0; i < intersect_num; ++i) {
+    if (connected[a][i] && (!in_arr(visited, i))) 
+  }
+
+
+
+
+
+
+}
+
 static void move_cop(unsigned robber, unsigned target_dist)
 {
-  // cop = something
-  assert(cop_robber_dist(robber) == target_dist);
+  for (unsigned i = 0; i < intersect_num; ++i) {
+    if (intersect_dist(i, robber) == target_dist) {
+      cop = i;
+      break;
+    }
+  }
 }
 
 unsigned nextMove(unsigned R)
